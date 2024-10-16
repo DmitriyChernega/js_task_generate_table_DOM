@@ -358,7 +358,7 @@ const dashboard = document.querySelector('.dashboard');
 people.forEach((el) => {
   el.Age = el.died - el.born;
   el.Century = Math.ceil(el.died / 100);
-  el.sex = el.sex === 'f' ? 'female' : 'male';
+  el.sex = el.sex === 'f' ? 'Female' : 'Male';
 
   const row = `
       <td>${el.name}</td>
