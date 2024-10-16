@@ -353,12 +353,12 @@ const people = [
     slug: 'jacobus-bernardus-van-brussel-1736',
   },
 ];
-const table = document.querySelector('table');
+const dashboard = document.querySelector('.dashboard');
 
 people.forEach((el) => {
   el.Age = el.died - el.born;
   el.Century = Math.ceil(el.died / 100);
-  el.sex = el.sex === 'y' ? 'female' : 'male';
+  el.sex = el.sex === 'f' ? 'female' : 'male';
 
   const row = `
       <td>${el.name}</td>
@@ -369,5 +369,5 @@ people.forEach((el) => {
       <td>${el.Century}</td>
   `;
 
-  table.innerHTML += row;
+  dashboard.querySelector('tr').insertAdjacentHTML('afterend', row);
 });
