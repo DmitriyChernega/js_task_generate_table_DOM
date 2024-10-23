@@ -371,3 +371,4 @@ people.forEach((el) => {
 
   dashboard.querySelector('tr').insertAdjacentHTML('afterend', row);
 });
+
